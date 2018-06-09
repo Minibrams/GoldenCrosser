@@ -1,0 +1,44 @@
+﻿<Application x:Class="GoldenCrosser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             StartupUri="StockInfoView.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+
+                <!-- accent resource -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Emerald.xaml" />
+
+                <!-- theme resource -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+
+                <!-- Icons -->
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Global view styles -->
+
+            <!-- Added visibile gridlines for all datagrids -->
+            <Style TargetType="DataGrid" BasedOn="{StaticResource MetroDataGrid}">
+                <Setter Property="GridLinesVisibility" Value="All"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+                <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="LabelHeader">
+                <Setter Property="Margin" Value="0 0 0 5"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Background" Value="{StaticResource AccentColorBrush}"/>
+                <Setter Property="Foreground" Value="{StaticResource IdealForegroundColorBrush}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
